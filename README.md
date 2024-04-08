@@ -1,6 +1,6 @@
 # kaptcha - A kaptcha generation engine.
 
-This repo is the copy of http://code.google.com/p/kaptcha/ , fixed secure random.
+This repo is the copy of http://code.google.com/p/kaptcha/, fixed some security problems.
 ```
 <dependency>
   <groupId>tech.helloworldchao</groupId>
