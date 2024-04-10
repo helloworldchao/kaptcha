@@ -8,7 +8,7 @@ This repo is the copy of http://code.google.com/p/kaptcha/, fixed some security 
 <dependency>
   <groupId>tech.helloworldchao</groupId>
   <artifactId>kaptcha</artifactId>
-  <version>2.3.3</version>
+  <version>2.3.4</version>
 </dependency>
 ```
 
