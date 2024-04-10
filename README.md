@@ -31,7 +31,7 @@ public class CaptchaController {
         // generate text
         String capText = producer.createText();
         
-        // TODO: add save text logic ....
+        // TODO: save text logic ....
         
         // response to client
         BufferedImage bi = producer.createImage(capText);
@@ -49,7 +49,7 @@ public class CaptchaController {
         // generate text
         String capText = producer.createText();
         
-        // TODO: add save text logic ....
+        // TODO: save text logic ....
         
         // response to client
         String base64Image = producer.createBase64Image(capText);
