@@ -76,15 +76,16 @@ public class DefaultKaptcha extends Configurable implements Producer {
      * @param text the distorted characters
      * @return Base64 image with the text
      */
-    public String createBase64Image(String text) {
+    public String createBase64Image(String text) throws IOException {
         ByteArrayOutputStream stream = new ByteArrayOutputStream();
-        try {
-            ImageIO.write(createImage(text), "jpg", stream);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+
+        ImageIO.write(createImage(text), "jpg", stream);
         byte[] bytes = Base64.getEncoder().encode(stream.toByteArray());
         String base64 = new String(bytes);
+
+        stream.flush();
+        stream.close();
+
         return "data:image/jpeg;base64," + base64;
     }
 

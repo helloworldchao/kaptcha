@@ -1,6 +1,7 @@
 package tech.helloworldchao.kaptcha;
 
 import java.awt.image.BufferedImage;
+import java.io.IOException;
 
 /**
  * Responsible for creating captcha image with a text drawn on it.
@@ -20,7 +21,7 @@ public interface Producer {
      * @param text the distorted characters
      * @return Base64 image with the text
      */
-    public String createBase64Image(String text);
+    public String createBase64Image(String text) throws IOException;
 
     /**
      * @return the text to be drawn
